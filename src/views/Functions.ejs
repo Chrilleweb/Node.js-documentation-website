@@ -1,8 +1,61 @@
-
 <%- include('../components/Header.ejs') %>
 
-  <h1 className="text-6xl">Functions page</h1>
-  <p>Welcome to the Functions page!</p>
+<div class="container mx-auto mt-10 p-8 rounded-md mb-24">
+  <h1 class="text-3xl font-bold mb-6 text">
+    JavaScript Functions and Concepts
+  </h1>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-4">
+      1. Regular Function Declaration
+    </h2>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>function getRandomInt(min, max) {
+return Math.floor(Math.random() * (max + 1 - min) + min);
+}</code>
+    </pre>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-4">
+      2. Anonymous Function (Function Expression)
+    </h2>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const getRandomIntAnonymousFunction = function (min, max) {
+return Math.floor(Math.random() * (max + 1 - min) + min);
+};</code>
+    </pre>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-4">3. Arrow Functions</h2>
+    <p>
+      Arrow functions are a concise way to write functions in JavaScript.
+      They have a shorter syntax compared to regular functions and do not
+      bind their own 'this'.
+    </p>
+
+    <h3 class="text-xl font-semibold mb-2">
+      3.1 Arrow Function Syntax
+    </h3>
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const getRandomIntArrowFunction = (min, max) => {
+return Math.floor(Math.random() * (max + 1 - min) + min);
+};</code>
+    </pre>
+
+    <h3 class="text-xl font-semibold mb-2">
+      3.2 Arrow Function One-Liner
+    </h3>
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const getRandomIntArrowFunctionOneLiner = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);</code>
+    </pre>
+  </section>
+  <BackButton URL="/" />
+</div>
 
 <%- include('../components/Footer.ejs') %>
+
 
