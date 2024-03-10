@@ -7,9 +7,7 @@
 
   <!-- Section 1: Regular Function Declaration -->
   <section class="mb-8">
-    <h2 class="text-2xl mb-4">
-      1. Regular Function Declaration
-    </h2>
+    <h2 class="text-2xl mb-4">1. Regular Function Declaration</h2>
 
     <p class="mb-4">
       Regular functions are defined using the keyword <code>function</code>.
@@ -30,15 +28,13 @@ console.log(regularFunctionResult);</code></pre>
 
   <!-- Section 2: Anonymous Function (Function Expression) -->
   <section class="mb-8">
-    <h2 class="text-2xl mb-4">
-      2. Anonymous Function (Function Expression)
-    </h2>
+    <h2 class="text-2xl mb-4">2. Anonymous Function (Function Expression)</h2>
 
     <p class="mb-4">
       Anonymous functions, also known as function expressions, are defined
-      without a name. They are often assigned to a variable. These functions
-      can be useful when you need a function for a short-lived purpose or as
-      an argument to another function.
+      without a name. They are often assigned to a variable. These functions can
+      be useful when you need a function for a short-lived purpose or as an
+      argument to another function.
     </p>
 
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
@@ -56,15 +52,13 @@ console.log(anonymousFunctionResult);</code></pre>
   <section class="mb-8">
     <h2 class="text-2xl mb-4">3. Arrow Functions</h2>
     <p class="mb-4">
-      Arrow functions are a concise way to write functions in JavaScript.
-      They have a shorter syntax compared to regular functions and do not
-      bind their own 'this'.
+      Arrow functions are a concise way to write functions in JavaScript. They
+      have a shorter syntax compared to regular functions and do not bind their
+      own 'this'.
     </p>
 
     <!-- Subsection 3.1: Arrow Function Syntax -->
-    <h3 class="text-xl mb-2">
-      3.1 Arrow Function Syntax
-    </h3>
+    <h3 class="text-xl mb-2">3.1 Arrow Function Syntax</h3>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const getRandomIntArrowFunction = (min, max) => {
   return Math.floor(Math.random() * (max + 1 - min) + min);
@@ -77,9 +71,7 @@ console.log(anonymousFunctionResult);</code></pre>
 console.log(arrowFunctionResult);</code></pre>
 
     <!-- Subsection 3.2: Arrow Function One-Liner -->
-    <h3 class="text-xl mb-4 mt-4">
-      3.2 Arrow Function One-Liner
-    </h3>
+    <h3 class="text-xl mb-4 mt-4">3.2 Arrow Function One-Liner</h3>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const getRandomIntArrowFunctionOneLiner = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);</code></pre>
 
@@ -89,10 +81,15 @@ console.log(arrowFunctionResult);</code></pre>
 <code>const oneLinerResult = getRandomIntArrowFunctionOneLiner(1, 100);
 console.log(oneLinerResult);</code></pre>
   </section>
-  <%-include('../components/BackButton.ejs')%>
+  <div class="flex justify-between">
+    <div><%-include('../components/BackButton.ejs')%></div>
+    <div class="flex items-center">
+      <p class="mr-4">Variables</p>
+      <a href="/Variables"
+        ><img src="/svg/arrow.svg" alt="Arrow" height="50" width="50"
+      /></a>
+    </div>
+  </div>
 </div>
 
 <%- include('../components/Footer.ejs') %>
-
-
-
