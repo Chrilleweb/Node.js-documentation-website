@@ -5,6 +5,7 @@
     JavaScript Functions and Concepts
   </h1>
 
+  <!-- Section 1: Regular Function Declaration -->
   <section class="mb-8">
     <h2 class="text-2xl font-semibold mb-4">
       1. Regular Function Declaration
@@ -12,11 +13,15 @@
 
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>function getRandomInt(min, max) {
-return Math.floor(Math.random() * (max + 1 - min) + min);
-}</code>
-    </pre>
+  return Math.floor(Math.random() * (max + 1 - min) + min);
+}</code></pre>
+    <p>Example usage:</p>
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const regularFunctionResult = getRandomInt(1, 100);
+console.log(regularFunctionResult);</code></pre>
   </section>
 
+  <!-- Section 2: Anonymous Function (Function Expression) -->
   <section class="mb-8">
     <h2 class="text-2xl font-semibold mb-4">
       2. Anonymous Function (Function Expression)
@@ -24,11 +29,17 @@ return Math.floor(Math.random() * (max + 1 - min) + min);
 
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const getRandomIntAnonymousFunction = function (min, max) {
-return Math.floor(Math.random() * (max + 1 - min) + min);
-};</code>
-    </pre>
+  return Math.floor(Math.random() * (max + 1 - min) + min);
+};</code></pre>
+
+    <!-- Example of calling the anonymous function -->
+    <p>Example usage:</p>
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const anonymousFunctionResult = getRandomIntAnonymousFunction(1, 100);
+console.log(anonymousFunctionResult);</code></pre>
   </section>
 
+  <!-- Section 3: Arrow Functions -->
   <section class="mb-8">
     <h2 class="text-2xl font-semibold mb-4">3. Arrow Functions</h2>
     <p>
@@ -37,25 +48,37 @@ return Math.floor(Math.random() * (max + 1 - min) + min);
       bind their own 'this'.
     </p>
 
+    <!-- Subsection 3.1: Arrow Function Syntax -->
     <h3 class="text-xl font-semibold mb-2">
       3.1 Arrow Function Syntax
     </h3>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const getRandomIntArrowFunction = (min, max) => {
-return Math.floor(Math.random() * (max + 1 - min) + min);
-};</code>
-    </pre>
+  return Math.floor(Math.random() * (max + 1 - min) + min);
+};</code></pre>
 
+    <!-- Example of calling the arrow function with syntax -->
+    <p>Example usage:</p>
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const arrowFunctionResult = getRandomIntArrowFunction(1, 100);
+console.log(arrowFunctionResult);</code></pre>
+
+    <!-- Subsection 3.2: Arrow Function One-Liner -->
     <h3 class="text-xl font-semibold mb-2">
       3.2 Arrow Function One-Liner
     </h3>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const getRandomIntArrowFunctionOneLiner = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);</code>
-    </pre>
+<code>const getRandomIntArrowFunctionOneLiner = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);</code></pre>
+
+    <!-- Example of calling the one-liner arrow function -->
+    <p>Example usage:</p>
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const oneLinerResult = getRandomIntArrowFunctionOneLiner(1, 100);
+console.log(oneLinerResult);</code></pre>
   </section>
-  <BackButton URL="/" />
 </div>
 
 <%- include('../components/Footer.ejs') %>
+
 
 
