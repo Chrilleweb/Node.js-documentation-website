@@ -11,11 +11,18 @@
       1. Regular Function Declaration
     </h2>
 
+    <p class="mb-4">
+      Regular functions are defined using the keyword <code>function</code>.
+      They have a name, which in this case is <code>getRandomInt</code>. These
+      functions can be called using their name and are often used for reusable
+      pieces of code.
+    </p>
+
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max + 1 - min) + min);
 }</code></pre>
-    <p>Example usage:</p>
+    <p class="m-4">Example usage:</p>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const regularFunctionResult = getRandomInt(1, 100);
 console.log(regularFunctionResult);</code></pre>
@@ -27,13 +34,19 @@ console.log(regularFunctionResult);</code></pre>
       2. Anonymous Function (Function Expression)
     </h2>
 
+    <p class="mb-4">
+      Anonymous functions, also known as function expressions, are defined
+      without a name. They are often assigned to a variable. These functions
+      can be useful when you need a function for a short-lived purpose or as
+      an argument to another function.
+    </p>
+
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const getRandomIntAnonymousFunction = function (min, max) {
   return Math.floor(Math.random() * (max + 1 - min) + min);
 };</code></pre>
-
     <!-- Example of calling the anonymous function -->
-    <p>Example usage:</p>
+    <p class="m-4">Example usage:</p>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const anonymousFunctionResult = getRandomIntAnonymousFunction(1, 100);
 console.log(anonymousFunctionResult);</code></pre>
@@ -42,7 +55,7 @@ console.log(anonymousFunctionResult);</code></pre>
   <!-- Section 3: Arrow Functions -->
   <section class="mb-8">
     <h2 class="text-2xl font-semibold mb-4">3. Arrow Functions</h2>
-    <p>
+    <p class="mb-4">
       Arrow functions are a concise way to write functions in JavaScript.
       They have a shorter syntax compared to regular functions and do not
       bind their own 'this'.
@@ -58,20 +71,20 @@ console.log(anonymousFunctionResult);</code></pre>
 };</code></pre>
 
     <!-- Example of calling the arrow function with syntax -->
-    <p>Example usage:</p>
+    <p class="m-4">Example usage:</p>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const arrowFunctionResult = getRandomIntArrowFunction(1, 100);
 console.log(arrowFunctionResult);</code></pre>
 
     <!-- Subsection 3.2: Arrow Function One-Liner -->
-    <h3 class="text-xl font-semibold mb-2">
+    <h3 class="text-xl font-semibold mb-4 mt-4">
       3.2 Arrow Function One-Liner
     </h3>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const getRandomIntArrowFunctionOneLiner = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);</code></pre>
 
     <!-- Example of calling the one-liner arrow function -->
-    <p>Example usage:</p>
+    <p class="m-4">Example usage:</p>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const oneLinerResult = getRandomIntArrowFunctionOneLiner(1, 100);
 console.log(oneLinerResult);</code></pre>
