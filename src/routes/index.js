@@ -13,4 +13,10 @@ router.get("/functions", (req, res) => {
   });
 });
 
+router.get("/variables", (req, res) => {
+  res.render("Variables", {
+    pageTitle: "Variables",
+  });
+});
+
 module.exports = router;
