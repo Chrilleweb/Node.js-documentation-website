@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-    @apply font-light;
+  @apply font-light;
+}
+
+.loader-bar {
+  @apply fixed top-0 left-0 h-1 bg-blue-500;
+  width: 0;
+  transition: width 0.3s ease;
 }
