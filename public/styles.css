@@ -550,6 +550,9 @@ video {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -670,6 +673,9 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.font-bold {
+  font-weight: 700;
 }
 .font-extralight {
   font-weight: 200;

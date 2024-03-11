@@ -41,4 +41,14 @@ router.get("/package-json", (req, res) => {
   });
 });
 
+router.get("/html-express", (req, res) => {
+
+  const message = "This is data from express !";
+
+  res.render("ServingHTML", {
+    pageTitle: "HTML Express",
+    message: message
+  });
+})
+
 module.exports = router;

@@ -1,0 +1,88 @@
+<%- include('../components/Header.ejs') %>
+
+<div class="container mx-auto mt-8 p-8 rounded-md mb-24">
+  <h1 class="text-3xl font-normal mb-12 text-center">
+    Serving HTML with Express
+  </h1>
+
+  <!-- Section 1: Introduction -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">1. Introduction</h2>
+
+    <p class="mb-4">
+      This page demonstrates how to serve HTML content using Express, and how to fetch data from an Express endpoint in a client-side application.
+    </p>
+  </section>
+
+  <!-- Section 2: Example of Serving HTML -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">2. Example of Serving HTML</h2>
+
+    <p class="mb-4">
+      Express provides the <code>res.sendFile</code> method to serve static files, including HTML. Below is an example of serving an HTML file named <code>index.html</code>:
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const express = require('express');
+
+const app = express();
+const PORT = 8080;
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.get("/api/html-express", (req, res) => {
+  res.send("This is data from Express!");
+});
+
+app.listen(PORT, () => {
+  console.log("Server is running on port 8080");
+});</code></pre>
+
+    <p class="mb-4 mt-4">
+      In this example, the <code>res.sendFile</code> method is used to send the contents of <code>index.html</code> to the client.
+    </p>
+  </section>
+
+  <!-- Section 3: Usage Example -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">3. Usage Example</h2>
+
+    <p class="mb-4">
+      To test the endpoint, you can make a request to <code>/api/html-express</code>, and the server will respond with the data as a plain string.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>fetch("/api/html-express")
+  .then(response => response.text())
+  .then(data => console.log(data));</code></pre>
+
+    <p class="mb-4 mt-4">
+      The above code makes a fetch request to <code>/api/html-express</code> and logs the plain text data to the console.
+    </p>
+
+    <!-- Subsection 3.1: Additional Usage Example -->
+    <h3 class="text-xl mb-2">3.1 Additional Usage Example</h3>
+    <p class="mb-4">
+      The following example displays the message fetched from the Express server:
+    </p>
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code><%- message %></code></pre>
+  </section>
+
+  <div class="flex justify-between">
+    <div><%- include('../components/BackButton.ejs') %></div>
+    <div class="flex items-center">
+      <p class="mr-4">Git Terminal</p>
+      <a href="/git-terminal"
+        ><img src="/svg/arrow.svg" alt="Arrow" height="50" width="50"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<%- include('../components/Footer.ejs') %>
+
+
+
