@@ -31,4 +31,14 @@ router.get("/rest-api", (req, res) => {
   });
 })
 
+router.get("/package-json", (req, res) => {
+  const packageJsonPath = require.resolve('../../package.json'); 
+  const packageJsonContent = require(packageJsonPath);
+
+  res.render("PackageJson", {
+    pageTitle: "Package-json",
+    packageJson: packageJsonContent
+  });
+});
+
 module.exports = router;

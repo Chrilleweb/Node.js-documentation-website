@@ -1,0 +1,89 @@
+<%- include('../components/Header.ejs') %>
+
+<div class="container mx-auto mt-8 p-8 rounded-md mb-24">
+  <h1 class="text-3xl font-normal mb-12 text-center">
+    Package.json Documentation
+  </h1>
+
+  <!-- Section 1: Introduction -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">1. Introduction</h2>
+
+    <p class="mb-4">
+      The `package.json` file is a crucial part of any Node.js project. It contains metadata about the project, as well as configuration details and dependencies.
+    </p>
+  </section>
+
+  <!-- Section 2: Displaying Package.json Content -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">2. Package.json Content</h2>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code><%- JSON.stringify(packageJson, null, 2) %></code></pre>
+
+    <p class="mb-4">
+      The above JSON represents the content of your `package.json` file. Customize your project details accordingly.
+    </p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">3. Examples and Details</h2>
+    <p class="mb-4">
+      Below are examples of common fields in a <code>package.json</code>{" "}
+      file along with explanations:
+    </p>
+
+    <h3 class="text-xl mb-2">3.1 Scripts</h3>
+    <pre class="bg-slate-200 p-4 rounded-md">
+<code>"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1",
+"start": "node server",
+"dev": "nodemon server"
+"build:css": "postcss public/global.css -o public/styles.css",
+"start:dev": " npm run build:css && npm run dev"
+}</code></pre>
+    <p class="mb-4">In this example:</p>
+    <ul class="list-disc pl-8 mb-4">
+      <li>
+        <code>npm run test</code>: Executes the specified test command. The
+        default command here prints an error message.
+      </li>
+      <li>
+        <code>npm run start</code>: Starts the application using the node
+        servercommand.
+      </li>
+      <li>
+<code>npm run dev</code>: Starts the application with nodemon, a
+tool that automatically restarts the server on file changes during
+development.
+      </li>
+    </ul>
+
+    <h3 class="text-xl mb-2">3.2 Dependencies</h3>
+    <pre class="bg-slate-200 p-4 rounded-md">
+<code>"dependencies": {
+"autoprefixer": "^10.4.7",
+"ejs": "^3.1.8",
+"express": "^4.18.1",
+"postcss": "^8.4.14",
+"tailwindcss": "^3.1.5"
+}</code></pre>
+    <p>
+      The <code>dependencies</code> section lists external packages required
+      by the project. The version numbers specify the range of acceptable
+      versions for each package.
+    </p>
+  </section>
+
+  <div class="flex justify-between">
+    <div><%-include('../components/BackButton.ejs')%></div>
+    <div class="flex items-center">
+      <p class="mr-4">REST API</p>
+      <a href="/rest-api"
+        ><img src="/svg/arrow.svg" alt="Arrow" height="50" width="50"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<%- include('../components/Footer.ejs') %>
