@@ -525,6 +525,9 @@ video {
     max-width: 1536px;
   }
 }
+.static {
+  position: static;
+}
 .fixed {
   position: fixed;
 }
@@ -549,9 +552,6 @@ video {
 }
 .mb-4 {
   margin-bottom: 1rem;
-}
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 .mb-8 {
   margin-bottom: 2rem;
@@ -582,6 +582,9 @@ video {
 }
 .flex {
   display: flex;
+}
+.contents {
+  display: contents;
 }
 .w-full {
   width: 100%;
@@ -674,17 +677,11 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.font-bold {
-  font-weight: 700;
-}
 .font-extralight {
   font-weight: 200;
 }
 .font-normal {
   font-weight: 400;
-}
-.font-semibold {
-  font-weight: 600;
 }
 .text-blue-500 {
   --tw-text-opacity: 1;
