@@ -19,4 +19,10 @@ router.get("/variables", (req, res) => {
   });
 });
 
+router.get("/data-types", (req, res) => {
+  res.render("DataTypes", {
+    pageTitle: "Data Types",
+  });
+})
+
 module.exports = router;

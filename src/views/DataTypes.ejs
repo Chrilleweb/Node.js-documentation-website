@@ -1,0 +1,98 @@
+<%- include('../components/Header.ejs') %>
+
+<div class="container mx-auto mt-8 p-8 rounded-md mb-24">
+    <h1 class="text-3xl font-normal mb-12 text-center">JavaScript Data Types</h1>
+
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">1. String</h2>
+      <p class="mb-4">
+        A sequence of characters used to represent text. Enclosed in single or
+        double quotes.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const greeting: string = 'Hello, World!';</code></pre>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">2. Number</h2>
+      <p class="mb-4">
+        Represents numeric values, including integers and floating-point
+        numbers.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const age: number = 25;</code></pre>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">3. Boolean</h2>
+      <p class="mb-4">Represents a logical value - either true or false.</p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const isTrue: boolean = true;</code></pre>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">4. Undefined</h2>
+      <p class="mb-4">
+        Indicates that a variable has been declared but has not been assigned
+        a value.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>let undefinedVar: undefined;</code></pre>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">5. Null</h2>
+      <p class="mb-4">Represents the intentional absence of any object value.</p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const nullVar: null = null;</code></pre>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">6. Object</h2>
+      <p class="mb-4">
+        Represents a collection of key-value pairs. Can include properties and
+        methods.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const person: { name: string, age: number } = { name: 'John', age: 30 };</code></pre>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">7. Array</h2>
+      <p class="mb-4">
+        An ordered list of values, where each value is identified by an index
+        or a key.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const numbers: number[] = [1, 2, 3, 4, 5];</code></pre>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">8. Date</h2>
+      <p class="mb-4">
+        Represents a specific point in time, typically with year, month, day,
+        hour, minute, second, and millisecond components.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const currentDate: Date = new Date();</code></pre>
+    </section>
+    <div class="flex justify-between">
+        <div><%-include('../components/BackButton.ejs')%></div>
+        <div class="flex items-center">
+          <p class="mr-4">REST API</p>
+          <a href="/rest-api"
+            ><img src="/svg/arrow.svg" alt="Arrow" height="50" width="50"
+          /></a>
+        </div>
+      </div>
+  </div>
+
+<%- include('../components/Footer.ejs') %>

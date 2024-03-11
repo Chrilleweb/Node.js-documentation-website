@@ -674,6 +674,9 @@ video {
 .font-normal {
   font-weight: 400;
 }
+.font-semibold {
+  font-weight: 600;
+}
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -710,9 +713,9 @@ body {
   left: 0px;
   height: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity)); /* Adjust color as needed */
-    width: 0;
-    transition: width 0.3s ease;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  width: 0;
+  transition: width 0.3s ease;
 }
 
 .hover\:text-gray-700:hover {
