@@ -1,7 +1,7 @@
 <%-include('../components/Header.ejs')%>
 
 <div class="container mx-auto mt-8 p-8 rounded-md mb-24">
-  <h1 class="text-3xl font-normal mb-12 text-center">JavaScript Variables</h1>
+  <h1 class="text-3xl font-normal mb-12 text-center">JavaScript Variables Documentation</h1>
 
   <section class="mb-8">
     <h2 class="text-2xl mb-4">1. Introduction</h2>
@@ -13,7 +13,7 @@
 
   <section class="mb-8">
     <h2 class="text-2xl mb-4">2. var Declaration</h2>
-    <p>
+    <p class="mb-4">
       var is function-scoped and is hoisted to the top of its containing
       function, meaning it can be used before its declaration. However, it
       doesn't have block-scoping, leading to potential issues in certain
@@ -26,7 +26,7 @@
 
   <section class="mb-8">
     <h2 class="text-2xl mb-4">3. let Declaration</h2>
-    <p>
+    <p class="mb-4">
       let is block-scoped, meaning it's limited to the block, statement, or
       expression where it is defined. It doesn't hoist the variable declaration,
       providing more predictable behavior and reducing potential bugs.
@@ -38,7 +38,7 @@
 
   <section class="mb-8">
     <h2 class="text-2xl mb-4">4. const Declaration</h2>
-    <p>
+    <p class="mb-4">
       const is also block-scoped and, like <code>let</code>, does not hoist the
       variable declaration. The key difference is that once a value is assigned
       to a <code>const</code>, it cannot be reassigned. It is used for values

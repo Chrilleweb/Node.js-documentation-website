@@ -21,7 +21,7 @@
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code><%- JSON.stringify(packageJson, null, 2) %></code></pre>
 
-    <p class="mb-4">
+    <p class="mb-4 mt-4">
       The above JSON represents the content of your `package.json` file. Customize your project details accordingly.
     </p>
   </section>
@@ -42,7 +42,7 @@
 "build:css": "postcss public/global.css -o public/styles.css",
 "start:dev": " npm run build:css && npm run dev"
 }</code></pre>
-    <p class="mb-4">In this example:</p>
+    <p class="mb-4 mt-4">In this example:</p>
     <ul class="list-disc pl-8 mb-4">
       <li>
         <code>npm run test</code>: Executes the specified test command. The
@@ -68,7 +68,7 @@ development.
 "postcss": "^8.4.14",
 "tailwindcss": "^3.1.5"
 }</code></pre>
-    <p>
+    <p class="mt-4">
       The <code>dependencies</code> section lists external packages required
       by the project. The version numbers specify the range of acceptable
       versions for each package.
