@@ -25,4 +25,10 @@ router.get("/data-types", (req, res) => {
   });
 })
 
+router.get("/rest-api", (req, res) => {
+  res.render("RestAPI", {
+    pageTitle: "REST API",
+  });
+})
+
 module.exports = router;

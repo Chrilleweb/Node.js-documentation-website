@@ -1,0 +1,82 @@
+<%- include('../components/Header.ejs') %>
+
+<div class="container mx-auto mt-8 p-8 rounded-md mb-24">
+  <h1 class="text-3xl font-normal mb-12 text-center">
+    Node.js Express REST API Documentation
+  </h1>
+
+  <!-- Section 1: Introduction -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">1. Introduction</h2>
+
+    <p class="mb-4">
+      Welcome to the documentation for Node.js Express REST API. This section provides an overview of the API and its functionality.
+    </p>
+  </section>
+
+  <!-- Section 2: Setting Up Express -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">2. Setting Up Express</h2>
+
+    <p class="mb-4">
+      To get started, you need to set up an Express application. Follow the steps below to initialize your project and install the necessary dependencies.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>const express = require('express');
+const app = express();
+
+// Define your routes and middleware here
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});</code></pre>
+  </section>
+
+  <!-- Section 3: Creating API Endpoints -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">3. Creating API Endpoints</h2>
+
+    <p class="mb-4">
+      Define your API endpoints to handle various HTTP methods (GET, POST, PUT, DELETE). Below is an example of a simple GET endpoint.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>// Example GET endpoint
+app.get('/api/users', (req, res) => {
+  // Your logic to retrieve users from the database
+  res.json({ users: [...] });
+});</code></pre>
+  </section>
+
+  <!-- Section 4: Handling Request Parameters -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">4. Handling Request Parameters</h2>
+
+    <p class="mb-4">
+      Learn how to handle request parameters, both from the URL and request body. Here's an example of handling a parameter in the URL.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>// Handling URL parameter
+app.get('/api/users/:id', (req, res) => {
+  const userId = req.params.id;
+  // Your logic to retrieve user details by ID
+  res.json({ user: { id: userId, name: 'John Doe' } });
+});</code></pre>
+  </section>
+
+  <!-- Additional Sections -->
+
+  <div class="flex justify-between">
+    <div><%-include('../components/BackButton.ejs')%></div>
+    <div class="flex items-center">
+      <p class="mr-4">Authentication</p>
+      <a href="/Authentication"
+        ><img src="/svg/arrow.svg" alt="Arrow" height="50" width="50"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<%- include('../components/Footer.ejs') %>
