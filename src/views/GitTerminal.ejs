@@ -1,0 +1,121 @@
+<%- include('../components/Header.ejs') %>
+
+<div class="container mx-auto mt-8 p-8 rounded-md mb-24">
+  <h1 class="text-3xl font-normal mb-8 text-center">
+    Git Terminal Documentation
+  </h1>
+
+  <!-- Section 1: Introduction -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">1. Introduction</h2>
+
+    <p class="mb-4">
+      This documentation covers essential Git commands used in the terminal for version control. Git is a distributed version control system widely used for tracking changes in source code during software development.
+    </p>
+  </section>
+
+  <!-- Section 2: Git Status -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">2. Git Status</h2>
+
+    <p class="mb-4">
+      The <code>git status</code> command shows the status of changes as untracked, modified, or staged in your working directory.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>git status</code></pre>
+
+    <p class="mb-4 mt-4">
+      This command helps you understand the current state of your repository.
+    </p>
+  </section>
+
+  <!-- Section 3: Git Add -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">3. Git Add</h2>
+
+    <p class="mb-4">
+      The <code>git add</code> command stages changes for the next commit. The period (<code>.</code>) indicates all changes in the current directory.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>git add .</code></pre>
+
+    <p class="mb-4 mt-4">
+      This command prepares changes to be committed.
+    </p>
+  </section>
+
+  <!-- Section 4: Git Commit -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">4. Git Commit</h2>
+
+    <p class="mb-4">
+      The <code>git commit</code> command records staged changes with a commit message.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>git commit -m "commit message"</code></pre>
+
+    <p class="mb-4 mt-4">
+      This command creates a new commit with the specified message.
+    </p>
+  </section>
+
+  <!-- Section 5: Git Push -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">5. Git Push</h2>
+
+    <p class="mb-4">
+      The <code>git push</code> command uploads local commits to a remote repository.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>git push</code></pre>
+
+    <p class="mb-4 mt-4">
+      This command synchronizes your local repository with the remote repository.
+    </p>
+  </section>
+
+  <!-- Section 6: Git Branches -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">6. Git Branches</h2>
+
+    <p class="mb-4">
+      Git branches allow you to work on different parts of your project concurrently. Use the following commands to manage branches.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code># Create a new branch
+git branch branch_name
+
+# Switch to a branch
+git checkout branch_name
+
+# Create and switch to a new branch
+git checkout -b new_branch_name
+
+# List all branches
+git branch
+
+# Merge changes from one branch to another
+git merge branch_name</code></pre>
+
+    <p class="mb-4 mt-4">
+      These commands help you create, switch, list, and merge branches in your Git repository.
+    </p>
+  </section>
+
+  <div class="flex justify-between">
+    <div><%- include('../components/BackButton.ejs') %></div>
+    <div class="flex items-center">
+      <p class="mr-4">Home</p>
+      <a href="/"
+        ><img src="/svg/arrow.svg" alt="Arrow" height="50" width="50"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<%- include('../components/Footer.ejs') %>

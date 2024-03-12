@@ -51,4 +51,10 @@ router.get("/html-express", (req, res) => {
   });
 })
 
+router.get("/git-terminal", (req, res) => {
+  res.render("GitTerminal", {
+    pageTitle: "Git Terminal",
+  });
+})
+
 module.exports = router;
