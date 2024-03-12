@@ -57,4 +57,10 @@ router.get("/git-terminal", (req, res) => {
   });
 })
 
+router.get("/server-side-rendering", (req, res) =>{
+  res.render("ServerSideRendering", {
+    pageTitle: "Server Side Rendering"
+  });
+})
+
 module.exports = router;

@@ -1,0 +1,97 @@
+<%- include('../components/Header.ejs') %>
+
+<div class="container mx-auto mt-8 p-8 rounded-md mb-24">
+  <h1 class="text-3xl font-normal mb-8 text-center">
+    Server-side vs. Client-side Rendering with Express and EJS Documentation
+  </h1>
+
+  <!-- Section 1: Introduction -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">1. Introduction</h2>
+
+    <p class="mb-4">
+      This documentation explores the concepts of Server-side Rendering (SSR) and Client-side Rendering in web development, with a focus on implementing SSR using Express and EJS templating engine.
+    </p>
+  </section>
+
+  <!-- Section 2: Server-side Rendering (SSR) -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">2. Server-side Rendering (SSR)</h2>
+
+    <p class="mb-4">
+      Server-side Rendering involves generating HTML on the server and sending the fully-rendered page to the client. Express, combined with EJS, can achieve SSR easily.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>// Install necessary dependencies
+npm install express ejs
+
+// Implement SSR with Express and EJS
+const express = require('express');
+const ejs = require('ejs');
+const app = express();
+const PORT = 8080;
+
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  res.render('index', { message: 'Hello from the server!' });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});</code></pre>
+
+    <p class="mb-4 mt-4">
+      In this example, the server renders the 'index' EJS template and sends the HTML to the client with the provided data.
+    </p>
+  </section>
+
+  <!-- Section 3: Client-side Rendering -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">3. Client-side Rendering</h2>
+
+    <p class="mb-4">
+      Client-side Rendering involves sending minimal HTML to the client and using JavaScript to dynamically render content. This approach shifts rendering responsibilities to the client's browser.
+    </p>
+
+    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Client-side Rendering&lt;/title&gt;
+  &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="app"&gt;&lt;/div&gt;
+
+  &lt;script&gt;
+    $(document).ready(function() {
+      // Fetch data from the server and render dynamically
+      $.get('/api/data', function(data) {
+        $('#app').html('&lt;p&gt;' + data.message + '&lt;/p&gt;');
+      });
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <p class="mb-4 mt-4">
+      This example uses jQuery to make an asynchronous request to the server, fetches data, and dynamically updates the content on the client side.
+    </p>
+  </section>
+
+  <div class="flex justify-between">
+    <div><%- include('../components/BackButton.ejs') %></div>
+    <div class="flex items-center">
+      <p class="mr-4">Home</p>
+      <a href="/"
+        ><img src="/svg/arrow.svg" alt="Arrow" height="50" width="50"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<%- include('../components/Footer.ejs') %>
