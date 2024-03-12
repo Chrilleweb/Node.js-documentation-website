@@ -83,6 +83,26 @@ app.listen(PORT, () => {
     </p>
   </section>
 
+  <!-- Section 4: SSR vs. CSR -->
+  <section class="mb-8">
+    <h2 class="text-2xl mb-4">4. Server-side Rendering (SSR) vs. Client-side Rendering (CSR)</h2>
+
+    <p class="mb-4">
+      When considering Server-side Rendering (SSR) versus Client-side Rendering (CSR), several factors come into play:
+    </p>
+
+    <ul class="list-disc pl-8 mb-4">
+      <li><strong>Load Time:</strong> SSR typically results in faster initial load times because the server sends fully-rendered HTML to the client. In contrast, CSR might have a slower initial load time as it requires downloading JavaScript files and executing them to render content.</li>
+      <li><strong>Resources Spent:</strong> SSR may require more server resources as it processes each request to generate HTML. CSR shifts processing to the client's browser, potentially reducing server load but increasing client-side resource usage.</li>
+      <li><strong>SEO:</strong> SSR is advantageous for SEO because search engine crawlers can easily parse the fully-rendered HTML content. CSR might require additional steps, such as server-side rendering for crawlers or dynamic rendering, to ensure proper indexing.</li>
+      <li><strong>CORS Problems:</strong> SSR inherently avoids Cross-Origin Resource Sharing (CORS) problems as all content originates from the same server. CSR might encounter CORS issues when making requests to external APIs or resources.</li>
+    </ul>
+
+    <p>
+      Ultimately, the choice between SSR and CSR depends on the specific requirements and constraints of your project, balancing factors like performance, scalability, and SEO considerations.
+    </p>
+  </section>
+
   <div class="flex justify-between">
     <div><%- include('../components/BackButton.ejs') %></div>
     <div class="flex items-center">
