@@ -1,33 +1,44 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-  <title> <%= pageTitle %> </title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <title><%= pageTitle %></title>
 </head>
 <body>
-<header>
-  <%-include('LoaderBar.ejs')%>
-  <nav class="flex flex-col md:flex-row justify-between items-center py-4 2xl:px-8 border-b-2 border-stone-200 bg-stone-100 font-extralight">
-    <div class="flex items-center ml-2">
-      <a href="/">
-        <h1 class="text-2xl">Mandatory 1</h1>
-      </a>
-    </div>
-    <div class="flex items-center mr-2">
-      <a href="/" class="p-2 hover:text-gray-700 transition duration-200">Home</a>
-      <a href="/functions" class="p-2 hover:text-gray-700 transition duration-300">Functions</a>
-      <a href="/variables" class="p-2 hover:text-gray-700 transition duration-300">Variables/data types</a>
-      <a href="/rest-api" class="p-2 hover:text-gray-700 transition duration-300">REST API</a>
-      <a href="/package-json" class="p-2 hover:text-gray-700 transition duration-300">Package.json</a>
-      <a href="/html-express" class="p-2 hover:text-gray-700 transition duration-300">Serving HTML</a>
-      <a href="/git-terminal" class="p-2 hover:text-gray-700 transition duration-300">Git Terminal</a>
-      <a href="/server-side-rendering" class="p-2 hover:text-gray-700 transition duration-300">SSR vs. CSR</a>
-    </div>
-  </nav>  
-</header>
-<body>
-<main>
+  <header>
+    <%-include('LoaderBar.ejs')%>
+    <nav class="flex flex-col lg:flex-row justify-between items-center py-4 2xl:px-8 border-b-2 border-stone-200 bg-stone-100 font-extralight">
+      <div class="flex items-center ml-2">
+        <a href="/">
+          <h1 class="text-2xl">Mandatory 1</h1>
+        </a>
+      </div>
+      <div class="nav-links flex items-center mr-2">
+        <a href="/" class="p-2 hover:text-gray-700 transition duration-200">Home</a>
+        <a href="/functions" class="p-2 hover:text-gray-700 transition duration-300">Functions</a>
+        <a href="/variables" class="p-2 hover:text-gray-700 transition duration-300">Variables/data types</a>
+        <a href="/rest-api" class="p-2 hover:text-gray-700 transition duration-300">REST API</a>
+        <a href="/package-json" class="p-2 hover:text-gray-700 transition duration-300">Package.json</a>
+        <a href="/html-express" class="p-2 hover:text-gray-700 transition duration-300">Serving HTML</a>
+        <a href="/git-terminal" class="p-2 hover:text-gray-700 transition duration-300">Git Terminal</a>
+        <a href="/server-side-rendering" class="p-2 hover:text-gray-700 transition duration-300">SSR vs. CSR</a>
+      </div>
+      <button class="burger-menu">&#9776;</button> <!-- Burger menu button -->
+    </nav>  
+  </header>
+  <main>
+
+  <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    burgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
 
 

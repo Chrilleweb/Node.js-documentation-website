@@ -11,3 +11,24 @@ body {
   width: 0;
   transition: width 0.3s ease;
 }
+
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245 245 244 / var(--tw-bg-opacity));
+    padding: 10px;
+  }
+}
