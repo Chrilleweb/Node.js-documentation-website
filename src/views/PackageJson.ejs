@@ -36,7 +36,7 @@
     <h3 class="text-xl mb-2">3.1 Scripts</h3>
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>"scripts": {
-"test": "echo \"Error: no test specified\" && exit 1",
+"test": "mocha test/index.test.js",
 "start": "node server",
 "dev": "nodemon server"
 "build:css": "postcss public/global.css -o public/styles.css",
@@ -45,8 +45,7 @@
     <p class="mb-4 mt-4">In this example:</p>
     <ul class="list-disc pl-8 mb-4">
       <li>
-        <code>npm run test</code>: Executes the specified test command. The
-        default command here prints an error message.
+        <code>npm run test</code>: Executes the specified test command.
       </li>
       <li>
         <code>npm run start</code>: Starts the application using the node
