@@ -721,32 +721,32 @@ body {
   transition: width 0.3s ease;
 }
 
-/* Add CSS for the burger menu */
 .burger-menu {
-  display: none; /* Hide by default */
+  display: none;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 900px) {
   .burger-menu {
-    display: block; /* Show burger menu button */
+    display: block;
   }
-  
+
   .nav-links {
-    display: none; /* Hide navigation links */
+    display: none;
   }
 
   .nav-links.active {
-    display: flex; /* Show navigation links when active */
+    display: flex;
     flex-direction: column;
-    background-color: rgb(245 245 244 / var(--tw-bg-opacity)); /* Add background color for better visibility */
+    background-color: rgb(245 245 244 / var(--tw-bg-opacity));
     padding: 10px;
   }
 }
+
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+
 @media (min-width: 1024px) {
 
   .lg\:flex-row {
@@ -758,6 +758,7 @@ body {
     padding-right: 0px;
   }
 }
+
 @media (min-width: 1536px) {
 
   .\32xl\:px-8 {
