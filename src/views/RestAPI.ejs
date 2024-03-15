@@ -10,7 +10,8 @@
     <h2 class="text-2xl mb-4">1. Introduction</h2>
 
     <p class="mb-4">
-      Welcome to the documentation for Node.js Express REST API. This section provides an overview of the API and its functionality.
+      Welcome to the documentation for Node.js Express REST API. This section
+      provides an overview of the API and its functionality.
     </p>
   </section>
 
@@ -19,54 +20,122 @@
     <h2 class="text-2xl mb-4">2. Setting Up Express</h2>
 
     <p class="mb-4">
-      To get started, you need to set up an Express application. Follow the steps below to initialize your project and install the necessary dependencies.
+      To get started, you need to set up an Express application. Follow the
+      steps below to initialize your project and install the necessary
+      dependencies.
     </p>
 
     <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
 <code>const express = require('express');
-const app = express();
+  const app = express();
 
-// Define your routes and middleware here
+  // Define your routes and middleware here
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+  app.listen(3000, () => {
+    console.log('Server is running on port 3000');
 });</code></pre>
   </section>
 
-  <!-- Section 3: Creating API Endpoints -->
+  <!-- Section 4: Handling HTTP Methods -->
   <section class="mb-8">
-    <h2 class="text-2xl mb-4">3. Creating API Endpoints</h2>
+    <h2 class="text-2xl mb-4">4. Handling HTTP Methods</h2>
 
-    <p class="mb-4">
-      Define your API endpoints to handle various HTTP methods (GET, POST, PUT, DELETE). Below is an example of a simple GET endpoint.
-    </p>
+    <!-- Subsection 4.1: GET Method -->
+    <section class="mb-8">
+      <h3 class="text-xl mb-4">4.1 GET Method</h3>
 
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>// Example GET endpoint
-app.get('/api/users', (req, res) => {
-  // Your logic to retrieve users from the database
-  res.json({ users: [...] });
+      <p class="mb-4">
+        The GET method is used to retrieve data from the server. Below is an
+        example of handling a GET request to retrieve todos.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>app.get('/api/todos', (req, res) => {
+  // Your logic to retrieve todos from the database
+  res.json({ todos: [...] });
 });</code></pre>
-  </section>
+    </section>
 
-  <!-- Section 4: Handling Request Parameters -->
-  <section class="mb-8">
-    <h2 class="text-2xl mb-4">4. Handling Request Parameters</h2>
+    <!-- Subsection 4.2: POST Method -->
+    <section class="mb-8">
+      <h3 class="text-xl mb-4">4.2 POST Method</h3>
 
-    <p class="mb-4">
-      Learn how to handle request parameters, both from the URL and request body. Here's an example of handling a parameter in the URL.
-    </p>
+      <p class="mb-4">
+        The POST method is used to submit data to the server to create a new
+        resource. Below is an example of handling a POST request to create a new
+        user.
+      </p>
 
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>// Handling URL parameter
-app.get('/api/users/:id', (req, res) => {
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>app.post('/api/users', (req, res) => {
+  // Logic to create a new user based on request body
+  res.status(201).json({ message: 'User created successfully' });
+});</code></pre>
+    </section>
+
+    <!-- Subsection 4.3: DELETE Method -->
+    <section class="mb-8">
+      <h3 class="text-xl mb-4">4.3 DELETE Method</h3>
+
+      <p class="mb-4">
+        The DELETE method is used to delete a resource identified by a specific
+        URI. Below is an example of handling a DELETE request to delete a user
+        by ID.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>app.delete('/api/users/:id', (req, res) => {
+  const userId = req.params.id;
+  // Logic to delete user by ID
+  res.json({ message: 'User deleted successfully' });
+});</code></pre>
+    </section>
+
+    <!-- Subsection 4.4: PUT vs PATCH -->
+    <section class="mb-8">
+      <h3 class="text-xl mb-4">4.4 PUT vs PATCH</h3>
+
+      <p class="mb-4">
+        Both PUT and PATCH methods are used to update resources, but they differ
+        in their behavior. PUT is used to update the entire resource, while
+        PATCH is used to apply partial modifications to the resource.
+      </p>
+
+      <p class="mb-4">
+        Here's an example illustrating the difference between PUT and PATCH:
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>app.put('/api/users/:id', (req, res) => {
+  const userId = req.params.id;
+  // Logic to update user by ID with entire resource
+  res.json({ message: 'User updated successfully' });
+});
+
+app.patch('/api/users/:id', (req, res) => {
+  const userId = req.params.id;
+  // Logic to update user by ID with partial modifications
+  res.json({ message: 'User updated successfully' });
+});</code></pre>
+    </section>
+
+    <!-- Section 5: Handling Request Parameters -->
+    <section class="mb-8">
+      <h2 class="text-2xl mb-4">5. Handling Request Parameters</h2>
+
+      <p class="mb-4">
+        Learn how to handle request parameters, both from the URL and request
+        body. Here's an example of handling a parameter in the URL.
+      </p>
+
+      <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+<code>app.get('/api/users/:id', (req, res) => {
   const userId = req.params.id;
   // Your logic to retrieve user details by ID
   res.json({ user: { id: userId, name: 'John Doe' } });
 });</code></pre>
+    </section>
   </section>
-
-  <!-- Additional Sections -->
 
   <div class="flex justify-between">
     <div><%-include('../components/BackButton.ejs')%></div>
