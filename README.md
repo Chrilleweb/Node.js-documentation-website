@@ -28,12 +28,14 @@ The documentation covers the following subjects:
 
 Feel free to explore each topic to deepen your knowledge of Node.js and Express.
 
+<img width="1439" alt="Skærmbillede 2024-03-15 kl  17 21 57" src="https://github.com/Chrilleweb/Node.js-documentation-website/assets/96743881/196efa2a-ed66-4b3f-8e04-d480f7e87b39">
+
 ## Getting Started
 
 To get started, simply clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/Chrilleweb/nodejs-express-documentation.git
+git clone https://github.com/Chrilleweb/Node.js-documentation-website.git
 ```
 
 Once cloned, you can navigate to each topic's corresponding link in the documentation and explore the provided information.
