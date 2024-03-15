@@ -9,7 +9,6 @@ This project serves as documentation for subjects covered in Node.js Fullstack c
 - [Getting Started](#getting-started)
 - [How to Run the Project](#how-to-run-the-project)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -58,7 +57,3 @@ This will launch the server and allow you to access the documentation in your we
 ## Contributing
 
 If you'd like to contribute to this documentation, contributions are welcome! You can submit pull requests with improvements, corrections, or additional content to enhance the documentation for others.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
