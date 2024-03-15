@@ -23,21 +23,21 @@ router.get("/data-types", (req, res) => {
   res.render("DataTypes", {
     pageTitle: "Data Types",
   });
-})
+});
 
 router.get("/rest-api", (req, res) => {
   res.render("RestAPI", {
     pageTitle: "REST API",
   });
-})
+});
 
 router.get("/package-json", (req, res) => {
-  const packageJsonPath = require.resolve('../../package.json'); 
+  const packageJsonPath = require.resolve("../../package.json"); 
   const packageJsonContent = require(packageJsonPath);
 
   res.render("PackageJson", {
     pageTitle: "Package-json",
-    packageJson: packageJsonContent
+    packageJson: packageJsonContent,
   });
 });
 
@@ -47,20 +47,20 @@ router.get("/html-express", (req, res) => {
 
   res.render("ServingHTML", {
     pageTitle: "HTML Express",
-    message: message
+    message: message,
   });
-})
+});
 
 router.get("/git-terminal", (req, res) => {
   res.render("GitTerminal", {
     pageTitle: "Git Terminal",
   });
-})
+});
 
 router.get("/server-side-rendering", (req, res) =>{
   res.render("ServerSideRendering", {
-    pageTitle: "Server Side Rendering"
+    pageTitle: "Server Side Rendering",
   });
-})
+});
 
 module.exports = router;
