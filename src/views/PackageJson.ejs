@@ -18,7 +18,7 @@
   <section class="mb-8">
     <h2 class="text-2xl mb-4">2. Package.json Content</h2>
 
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
 <code><%- JSON.stringify(packageJson, null, 2) %></code></pre>
 
     <p class="mb-4 mt-4">
@@ -26,7 +26,7 @@
     </p>
   </section>
 
-  <section class="mb-8">
+  <section class="mb-8 border-b-2 border-stone-200">
     <h2 class="text-2xl mb-4">3. Examples and Details</h2>
     <p class="mb-4">
       Below are examples of common fields in a <code>package.json</code>{" "}
@@ -34,7 +34,7 @@
     </p>
 
     <h3 class="text-xl mb-2">3.1 Scripts</h3>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
 <code>"scripts": {
 "test": "mocha test/index.test.js",
 "start": "node app.js",
@@ -47,25 +47,25 @@
     <p class="mb-4 mt-4">In this example:</p>
     <ul class="list-disc pl-8 mb-4">
       <li>
-        <code>npm run test</code>: Executes the specified test command.
+        <code class="font-bold">npm run test</code>: Executes the specified test command.
       </li>
       <li>
-        <code>npm run start</code>: Starts the application using the node
+        <code class="font-bold">npm run start</code>: Starts the application using the node
         servercommand.
       </li>
       <li>
-<code>npm run dev</code>: Starts the application with nodemon, a
+<code class="font-bold">npm run dev</code>: Starts the application with nodemon, a
 tool that automatically restarts the server on file changes during
 development.
       </li>
       <li>
-<code>npm run lint</code>: Runs ESLint to analyze your codebase and identify potential issues or violations of coding standards. ESLint is configured to enforce rules defined in your project's ESLint configuration file.
+<code class="font-bold">npm run lint</code>: Runs ESLint to analyze your codebase and identify potential issues or violations of coding standards. ESLint is configured to enforce rules defined in your project's ESLint configuration file.
       </li>
       
     </ul>
 
     <h3 class="text-xl mb-2">3.2 Dependencies</h3>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
 <code>"dependencies": {
 "autoprefixer": "^10.4.7",
 "ejs": "^3.1.8",
@@ -73,7 +73,7 @@ development.
 "postcss": "^8.4.14",
 "tailwindcss": "^3.1.5"
 }</code></pre>
-    <p class="mt-4">
+    <p class="mt-4 mb-8">
       The <code>dependencies</code> section lists external packages required
       by the project. The version numbers specify the range of acceptable
       versions for each package.

@@ -9,7 +9,8 @@
     <h2 class="text-2xl mb-4">1. Introduction</h2>
 
     <p class="mb-4">
-      Welcome to the documentation for JavaScript Functions. This section provides an overview of Javascript Functions and its functionality.
+      Welcome to the documentation for JavaScript Functions. This section
+      provides an overview of Javascript Functions and its functionality.
     </p>
   </section>
 
@@ -24,13 +25,13 @@
       pieces of code.
     </p>
 
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max + 1 - min) + min);
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">function</code> getRandomInt (<code class="text-codeVariable">min</code>, <code class="text-codeVariable">max</code>) {
+  <code class="text-codeVariable">return</code> Math.floor(Math.random() * (<code class="text-codeString">max</code> + <code class="text-codeString">1</code> - <code class="text-codeString">min</code>) + <code class="text-codeString">min</code>);
 }</code></pre>
     <p class="m-4">Example usage:</p>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const regularFunctionResult = getRandomInt(1, 100);
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">const</code> regularFunctionResult = getRandomInt(<code class="text-codeString">1</code>, <code class="text-codeString">100</code>);
 console.log(regularFunctionResult);</code></pre>
   </section>
 
@@ -45,14 +46,14 @@ console.log(regularFunctionResult);</code></pre>
       argument to another function.
     </p>
 
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const getRandomIntAnonymousFunction = function (min, max) {
-  return Math.floor(Math.random() * (max + 1 - min) + min);
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">const</code> getRandomIntAnonymousFunction = <code class="text-codeVariable">function</code> (<code class="text-codeString">min</code>, <code class="text-codeString">max</code>) {
+  <code class="text-codeVariable">return</code> Math.floor(Math.random() * (<code class="text-codeString">max</code> + <code class="text-codeString">1</code> - <code class="text-codeString">min</code>) + <code class="text-codeString">min</code>);
 };</code></pre>
     <!-- Example of calling the anonymous function -->
     <p class="m-4">Example usage:</p>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const anonymousFunctionResult = getRandomIntAnonymousFunction(1, 100);
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">const</code> anonymousFunctionResult = getRandomIntAnonymousFunction(<code class="text-codeString">1</code>, <code class="text-codeString">100</code>);
 console.log(anonymousFunctionResult);</code></pre>
   </section>
 
@@ -67,50 +68,57 @@ console.log(anonymousFunctionResult);</code></pre>
 
     <!-- Subsection 4.1: Arrow Function Syntax -->
     <h3 class="text-xl mb-2">4.1 Arrow Function Syntax</h3>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const getRandomIntArrowFunction = (min, max) => {
-  return Math.floor(Math.random() * (max + 1 - min) + min);
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">const</code> getRandomIntArrowFunction = (<code class="text-codeString">min</code>, <code class="text-codeString">max</code>) => {
+  <code class="text-codeVariable">return</code> Math.floor(Math.random() * (<code class="text-codeString">max</code> + <code class="text-codeString">1</code> - <code class="text-codeString">min</code>) + <code class="text-codeString">min</code>);
 };</code></pre>
 
     <!-- Example of calling the arrow function with syntax -->
     <p class="m-4">Example usage:</p>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const arrowFunctionResult = getRandomIntArrowFunction(1, 100);
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">const</code> arrowFunctionResult = getRandomIntArrowFunction(<code class="text-codeString">1</code>, <code class="text-codeString">100</code>);
 console.log(arrowFunctionResult);</code></pre>
 
     <!-- Subsection 4.2: Arrow Function One-Liner -->
     <h3 class="text-xl mb-4 mt-4">4.2 Arrow Function One-Liner</h3>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const getRandomIntArrowFunctionOneLiner = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);</code></pre>
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">const</code> getRandomIntArrowFunctionOneLiner = (<code class="text-codeString">min</code>, <code class="text-codeString">max</code>) => Math.floor(Math.random() * (<code class="text-codeString">max</code> + <code class="text-codeString">1</code> - <code class="text-codeString">min</code>) + <code class="text-codeString">min</code>);</code></pre>
 
     <!-- Example of calling the one-liner arrow function -->
     <p class="m-4">Example usage:</p>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const oneLinerResult = getRandomIntArrowFunctionOneLiner(1, 100);
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">const</code> oneLinerResult = getRandomIntArrowFunctionOneLiner(<code class="text-codeString">1</code>, <code class="text-codeString">100</code>);
 console.log(oneLinerResult);</code></pre>
   </section>
   <!-- Section 5: Async Functions -->
-<section class="mb-8">
-  <h2 class="text-2xl mb-4">5. Async Functions</h2>
+  <section class="mb-8 border-b-2 border-stone-200">
+    <h2 class="text-2xl mb-4">5. Async Functions</h2>
 
-  <p class="mb-4">
-    Async functions are a feature introduced in ECMAScript 2017 (ES8). They provide a cleaner and more concise way to work with asynchronous code in JavaScript. An async function returns a promise implicitly, allowing you to write asynchronous code that looks synchronous.
-  </p>
+    <p class="mb-4">
+      Async functions are a feature introduced in ECMAScript 2017 (ES8). They
+      provide a cleaner and more concise way to work with asynchronous code in
+      JavaScript. An async function returns a promise implicitly, allowing you
+      to write asynchronous code that looks synchronous.
+    </p>
 
-  <p class="mb-4">
-    The syntax for defining an async function is similar to regular functions, but with the <code>async</code> keyword preceding the function declaration. Inside an async function, you can use the <code>await</code> keyword to pause the execution and wait for a promise to resolve before continuing.
-  </p>
+    <p class="mb-4">
+      The syntax for defining an async function is similar to regular functions,
+      but with the <code>async</code> keyword preceding the function
+      declaration. Inside an async function, you can use the
+      <code>await</code> keyword to pause the execution and wait for a promise
+      to resolve before continuing.
+    </p>
 
-  <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>async function fetchData() {
-  const response = await fetch('https://api.example.com/data');
-  const data = await response.json();
-  return data;
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">async</code> function fetchData() {
+  <code class="text-codeVariable">const</code> response = <code class="text-codeVariable">await</code> fetch('https://api.example.com/data');
+  <code class="text-codeVariable">const</code> data = <code class="text-codeVariable">await</code> response.json();
+  <code class="text-codeVariable">return</code> data;
 }</code></pre>
 
-  <p class="m-4">Example usage:</p>
-  <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>fetchData()
+    <p class="m-4">Example usage:</p>
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText">fetchData()
   .then(data => {
     console.log(data);
   })
@@ -118,10 +126,12 @@ console.log(oneLinerResult);</code></pre>
     console.error('Error fetching data:', error);
   });</code></pre>
 
-  <p class="mb-4">
-    Async functions are commonly used when working with asynchronous operations such as fetching data from a server, reading files, or making network requests.
-  </p>
-</section>
+    <p class="mb-8 mt-4">
+      Async functions are commonly used when working with asynchronous
+      operations such as fetching data from a server, reading files, or making
+      network requests.
+    </p>
+  </section>
 
   <div class="flex justify-between">
     <div><%-include('../components/BackButton.ejs')%></div>

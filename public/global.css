@@ -4,6 +4,9 @@
 
 body {
   @apply font-light;
+  @apply bg-gray-600;
+  @apply text-codeText;
+  @apply font-mono;
 }
 
 .loader-bar {
@@ -28,7 +31,7 @@ body {
   .nav-links.active {
     display: flex;
     flex-direction: column;
-    background-color: rgb(245 245 244 / var(--tw-bg-opacity));
+    background-color: bg-gray-600;
     padding: 10px;
   }
 }

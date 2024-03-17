@@ -22,22 +22,22 @@
       Express provides the <code>res.sendFile</code> method to serve static files, including HTML. Below is an example of serving an HTML file named <code>index.html</code>:
     </p>
 
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>const express = require('express');
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText"><code class="text-codeVariable">const</code> express = require(<code class="text-codeString">'express'</code>);
 
-const app = express();
-const PORT = 8080;
+<code class="text-codeVariable">const</code> app = express();
+<code class="text-codeVariable">const</code> PORT = 8080;
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+app.get(<code class="text-codeString">'/'</code>, (req, res) => {
+  res.sendFile(__dirname + <code class="text-codeString">'/index.html'</code>);
 });
 
-app.get("/api/html-express", (req, res) => {
-  res.send("This is data from Express!");
+app.get(<code class="text-codeString">"/api/html-express"</code>, (req, res) => {
+  res.send(<code class="text-codeString">"This is data from Express!"</code>);
 });
 
 app.listen(PORT, () => {
-  console.log("Server is running on port 8080");
+  console.log(<code class="text-codeString">"Server is running on port 8080"</code>);
 });</code></pre>
 
     <p class="mb-4 mt-4">
@@ -46,15 +46,15 @@ app.listen(PORT, () => {
   </section>
 
   <!-- Section 3: Usage Example -->
-  <section class="mb-8">
+  <section class="mb-8 border-b-2 border-stone-200">
     <h2 class="text-2xl mb-4">3. Usage Example</h2>
 
     <p class="mb-4">
       To test the endpoint, you can make a request to <code>/api/html-express</code>, and the server will respond with the data as a plain string.
     </p>
 
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code>fetch("/api/html-express")
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto">
+<code class="text-codeText">fetch(<code class="text-codeString">"/api/html-express"</code>)
   .then(response => response.text())
   .then(data => console.log(data));</code></pre>
 
@@ -67,8 +67,8 @@ app.listen(PORT, () => {
     <p class="mb-4">
       The following example displays the message fetched from the Express server:
     </p>
-    <pre class="bg-slate-200 p-4 rounded-md overflow-auto">
-<code><%- message %></code></pre>
+    <pre class="bg-codeBG p-4 rounded-md overflow-auto mb-8">
+<code class="text-codeText"><%- message %></code></pre>
   </section>
 
   <div class="flex justify-between">
@@ -83,6 +83,7 @@ app.listen(PORT, () => {
 </div>
 
 <%- include('../components/Footer.ejs') %>
+
 
 
 
