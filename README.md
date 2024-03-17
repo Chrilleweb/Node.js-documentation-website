@@ -28,7 +28,7 @@ The documentation covers the following subjects:
 
 Feel free to explore each topic to deepen your knowledge of Node.js and Express.
 
-<img width="1439" alt="Skærmbillede 2024-03-17 kl  15 20 55" src="https://github.com/Chrilleweb/Node.js-documentation-website/assets/96743881/34f6ba71-b292-4497-aeda-fd517bdb958f">
+<img width="1439" alt="Skærmbillede 2024-03-17 kl  21 48 10" src="https://github.com/Chrilleweb/Node.js-documentation-website/assets/96743881/2438c2cd-fe0b-441a-b17a-25eb8d12a2b7">
 
 ## Getting Started
 
