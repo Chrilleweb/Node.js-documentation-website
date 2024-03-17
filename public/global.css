@@ -4,7 +4,7 @@
 
 body {
   @apply font-light;
-  @apply bg-gray-600;
+  @apply bg-gray-800;
   @apply text-codeText;
   @apply font-mono;
 }
@@ -31,7 +31,6 @@ body {
   .nav-links.active {
     display: flex;
     flex-direction: column;
-    background-color: bg-gray-600;
     padding: 10px;
   }
 }

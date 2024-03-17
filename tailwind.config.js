@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        codeVariable: '#66D9EF',
-        codeString: '#99CC7D',
-        codeBG: '#2C3437',
-        codeText: '#E9EDF0',
+        codeVariable: "#66D9EF",
+        codeString: "#99CC7D",
+        codeBG: "#2C3437",
+        codeText: "#E9EDF0",
       },
     },
   },

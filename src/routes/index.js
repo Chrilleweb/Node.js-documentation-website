@@ -63,9 +63,9 @@ router.get("/server-side-rendering", (req, res) =>{
   });
 });
 
-router.use((req, res, next) => {
+router.use((req, res) => {
   res.status(404).render("404", {
-     pageTitle: "Page Not Found" });
+    pageTitle: "Page Not Found" });
 });
 
 module.exports = router;

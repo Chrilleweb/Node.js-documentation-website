@@ -627,9 +627,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(44 52 55 / var(--tw-bg-opacity));
 }
-.bg-gray-600 {
+.bg-gray-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 .p-2 {
   padding: 0.5rem;
@@ -730,7 +730,7 @@ video {
 body {
   font-weight: 300;
   --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(233 237 240 / var(--tw-text-opacity));
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -763,7 +763,6 @@ body {
   .nav-links.active {
     display: flex;
     flex-direction: column;
-    background-color: bg-gray-600;
     padding: 10px;
   }
 }
@@ -773,9 +772,9 @@ body {
   color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
-.hover\:text-gray-700:hover {
+.hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
