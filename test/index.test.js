@@ -1,38 +1,28 @@
 const request = require("supertest");
-const server = require("../server");
+const server = require("../app");
 
-describe("GET /", function () {
-  it("responds with status 200", function (done) {
-    request(server).get("/").expect(200, done);
-  });
+test("GET /", () => {
+  request(server)
+    .get("/")
+    .expect(200);
 });
 
-describe("GET /functions", function () {
-  it("responds with status 200", function (done) {
-    request(server).get("/functions").expect(200, done);
-  });
+test("GET /functions", () => {
+  request(server)
+    .get("/functions")
+    .expect(200);
 });
 
-describe("GET /variables", function () {
-  it("responds with status 200", function (done) {
-    request(server).get("/variables").expect(200, done);
-  });
+test("GET /variables", () => {
+  request(server)
+    .get("/variables")
+    .expect(200);
 });
 
-describe("GET /html-express", function () {
-  it("responds with HTML and correct message", function (done) {
-    request(server)
-      .get("/html-express")
-      .expect("Content-Type", "text/html; charset=utf-8")
-      .expect(200)
-      .end(function (err, res) {
-        if (err) return done(err);
-
-        if (!res.text.includes("This is data from express !")) {
-          return done(new Error("Expected message not found in response body"));
-        }
-
-        done();
-      });
-  });
+test("GET /html-express", async () => {
+  const response = await request(server)
+    .get("/html-express")
+    .expect(200);
+    // eslint-disable-next-line no-undef
+  expect(response.text).toContain("This is data from express !");
 });
